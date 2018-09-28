@@ -69,7 +69,7 @@ class ChatWindow extends React.Component {
     e.preventDefault()
     const { user: { email } } = this.props
     const { message } = this.state
-    axios.post('/api/messages', { email, body: message })
+    axios.post('/api/messages', { body: message })
       .then( () => this.setState({ message: '' }) )
   }
 
